@@ -1,0 +1,218 @@
+<div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div>
+      <h1>Renaissance Academy</h1>
+      <p>14401 Owen Tech Blvd., Austin, TX 78728</p>
+      <p><a href="http://www.racademy.org">www.racademy.org</a></p>
+      <p>(512) 252-2277</p>
+      <p>E-mail: <a href="mailto:school@racademy.org">school@racademy.org</a></p>
+      <p>Application for Admission Pre-K (2024-2025)</p>
+    </div>
+  
+    <div>
+      <h1>Part 1</h1>
+      <form [formGroup]="familyForm" (ngSubmit)="onSubmit()">
+        <table>
+          <tr>
+            <td><label for="familyName">Family Name (Last Name): </label></td>
+            <td><input type="text" id="familyName" formControlName="familyName"></td>
+          </tr>
+          <tr>
+            <td><label for="motherEmail">Parent’s Email (Mother): </label></td>
+            <td><input type="email" id="motherEmail" formControlName="motherEmail"></td>
+          </tr>
+          <tr>
+            <td><label for="fatherEmail">Parent’s Email (Father): </label></td>
+            <td><input type="email" id="fatherEmail" formControlName="fatherEmail"></td>
+          </tr>
+          <tr>
+            <td><label for="familyMembers">Total Number of family members applying to Renaissance Academy: </label></td>
+            <td><input type="number" id="familyMembers" formControlName="familyMembers"></td>
+          </tr>
+          <tr>
+            <td><label for="appliedBefore">Has any family member or this applicant applied to Renaissance Academy before: </label></td>
+            <td>
+              <input type="radio" id="appliedBeforeYes" formControlName="appliedBefore" value="Y"> Yes
+              <input type="radio" id="appliedBeforeNo" formControlName="appliedBefore" value="N"> No
+            </td>
+          </tr>
+          <tr>
+            <td><label for="studentFirstName">Student First Name: </label></td>
+            <td><input type="text" id="studentFirstName" formControlName="studentFirstName"></td>
+          </tr>
+          <tr>
+            <td><label for="dateOfBirth">Date of Birth: </label></td>
+            <td><input type="date" id="dateOfBirth" formControlName="dateOfBirth"></td>
+          </tr>
+          <tr>
+            <td><label for="gradeApplyingFor">Grade Applying For: </label></td>
+            <td><input type="text" id="gradeApplyingFor" formControlName="gradeApplyingFor"></td>
+          </tr>
+        </table>
+
+        <h3>Please ensure that all of the required forms listed below have been completed before returning.
+            this application to Renaissance Academy.</h3>
+
+
+        <h2>Applicant's Checklist </h2>    
+            <div>
+                <input id="check1" type="checkbox" (change)="updateSelectedCheckboxes(1)"/> Application for Admission 
+              </div>
+              <div>
+                <input id="check2" type="checkbox" (change)="updateSelectedCheckboxes(2)"/> Health Requirements Form (Pre-K & KG applicants only) 
+              </div>
+              <div>
+                <input id="check3" type="checkbox" (change)="updateSelectedCheckboxes(3)"/> Updated Immunization Record 
+              </div>
+              <div>
+                <input id="check4" type="checkbox" (change)="updateSelectedCheckboxes(4)"/> Birth Certificate 
+              </div>
+              <div>
+                <input id="check5" type="checkbox" (change)="updateSelectedCheckboxes(5)"/> Record Release Form 
+              </div>
+              <div>
+                <input id="check6" type="checkbox" (change)="updateSelectedCheckboxes(6)"/> Family Financial Agreement (1 per family) 
+              </div>
+              <!--  -->
+              <h2>Application for Admission Pre-K (2024 – 2025)</h2>
+              <!--  -->
+
+
+<table>
+  <tr>
+    <td><label for="childFullName">Child’s Full Name: </label></td>
+    <td><input type="text" id="childFullName" formControlName="childFullName"></td>
+  </tr>
+  <tr>
+    <td><label for="childDateOfBirth">Child’s Date of Birth: </label></td>
+    <td><input type="date" id="childDateOfBirth" formControlName="childDateOfBirth"></td>
+  </tr>
+  <tr>
+    <td><label for="childHomeTelephone">Child’s Home Telephone No.: </label></td>
+    <td><input type="tel" id="childHomeTelephone" formControlName="childHomeTelephone"></td>
+  </tr>
+  <tr>
+    <td><label for="childHomeAddress">Child’s Home Address: </label></td>
+    <td><input type="text" id="childHomeAddress" formControlName="childHomeAddress"></td>
+  </tr>
+  <tr>
+    <td><label for="dateOfAdmissionChild">Date of Admission: </label></td>
+    <td><input type="date" id="dateOfAdmissionChild" formControlName="dateOfAdmissionChild"></td>
+  </tr>
+  <tr>
+    <td><label for="dateOfWithdrawalChild">Date of Withdrawal: </label></td>
+    <td><input type="date" id="dateOfWithdrawalChild" formControlName="dateOfWithdrawalChild"></td>
+  </tr>
+  <tr>
+    <td><label for="parentGuardianNameChild">Parent’s or Guardian’s Name: </label></td>
+    <td><input type="text" id="parentGuardianNameChild" formControlName="parentGuardianNameChild"></td>
+  </tr>
+  <tr>
+    <td><label for="addressDifferentChild">Address (if different from child’s address): </label></td>
+    <td><input type="text" id="addressDifferentChild" formControlName="addressDifferentChild"></td>
+  </tr>
+  <tr>
+    <td><label for="telephoneNumbersChild">List telephone numbers below where parents/guardian may be reached while child will be in care:</label></td>
+    <td><input type="tel" id="motherTelephoneNoChild" formControlName="motherTelephoneNoChild" placeholder="Mother’s Telephone No."></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="tel" id="fatherTelephoneNoChild" formControlName="fatherTelephoneNoChild" placeholder="Father’s Telephone No."></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="tel" id="guardianTelephoneNoChild" formControlName="guardianTelephoneNoChild" placeholder="Guardian’s Telephone No."></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="tel" id="cellPhoneNoChild" formControlName="cellPhoneNoChild" placeholder="Cell Phone No."></td>
+  </tr>
+  <tr>
+    <td><label for="emergencyContactNameChild">Person to call in case of an emergency if parents/guardian cannot be reached:</label></td>
+    <td><input type="text" id="emergencyContactNameChild" formControlName="emergencyContactNameChild"></td>
+  </tr>
+  <tr>
+    <td><label for="emergencyContactRelationshipChild">Relationship:</label></td>
+    <td><input type="text" id="emergencyContactRelationshipChild" formControlName="emergencyContactRelationshipChild"></td>
+  </tr>
+</table>
+
+<!-- ... Existing code above ... -->
+
+<h2>Parent Information</h2>
+
+<table>
+  <tr>
+    <td><label for="fatherFirstName">Father's Name:</label></td>
+    <td><input type="text" id="fatherFirstName" formControlName="fatherFirstName" placeholder="First Name"></td>
+    <td><input type="text" id="fatherMiddleName" formControlName="fatherMiddleName" placeholder="Middle Name"></td>
+    <td><input type="text" id="fatherLastName" formControlName="fatherLastName" placeholder="Last Name"></td>
+  </tr>
+  <tr>
+    <td><label for="fathersAddress">Address:</label></td>
+    <td colspan="3"><input type="text" id="fathersAddress" formControlName="fathersAddress" placeholder="Enter Address"></td>
+  </tr>
+  <tr>
+    <td><label for="telephoneNumbers">Telephone Numbers:</label></td>
+    <td><input type="tel" id="FTHRHomeTelephoneNo" formControlName="FTHRHomeTelephoneNo" placeholder="Home"></td>
+    <td><input type="tel" id="FTHRBusinessTelephoneNo" formControlName="FTHRBusinessTelephoneNo" placeholder="Business"></td>
+    <td><input type="tel" id="FTHRMobileTelephoneNo" formControlName="FTHRMobileTelephoneNo" placeholder="Mobile"></td>
+  </tr>
+  <tr>
+    <td><label for="fathersEmail">Email:</label></td>
+    <td><input type="email" id="fathersEmail" formControlName="fathersEmail" placeholder="Father's Email"></td>
+  </tr>
+  <tr>
+    <td><label for="fathersoccupation">Occupation:</label></td>
+    <td><input type="text" id="fathersoccupation" formControlName="fathersoccupation" placeholder="Father's Occupation"></td>
+  </tr>
+  <tr>
+    <td><label for="fathersEmployer">Employer:</label></td>
+    <td><input type="text" id="fathersEmployer" formControlName="fathersEmployer" placeholder="Father's Employer"></td>
+  </tr>
+
+  <!-- ... Existing fields below ... -->
+
+  <!-- Mother's Information -->
+  <tr>
+    <td><label for="motherFirstName">Mother's Name:</label></td>
+    <td><input type="text" id="motherFirstName" formControlName="motherFirstName" placeholder="First Name"></td>
+    <td><input type="text" id="motherMiddleName" formControlName="motherMiddleName" placeholder="Middle Name"></td>
+    <td><input type="text" id="motherLastName" formControlName="motherLastName" placeholder="Last Name"></td>
+  </tr>
+  <tr>
+    <td><label for="mothersAddress">Address:</label></td>
+    <td colspan="3"><input type="text" id="mothersAddress" formControlName="mothersAddress" placeholder="Enter Address"></td>
+  </tr>
+  <tr>
+    <td><label for="telephoneNumbers">Telephone Numbers:</label></td>
+    <td><input type="tel" id="MTHRHomeTelephoneNo" formControlName="MTHRHomeTelephoneNo" placeholder="Home"></td>
+    <td><input type="tel" id="MTHRBusinessTelephoneNo" formControlName="MTHRBusinessTelephoneNo" placeholder="Business"></td>
+    <td><input type="tel" id="MTHRMobileTelephoneNo" formControlName="MTHRMobileTelephoneNo" placeholder="Mobile"></td>
+  </tr>
+  <tr>
+    <td><label for="motherEmail">Mother's Email:</label></td>
+    <td><input type="email" id="motherEmail" formControlName="motherEmailPI" placeholder="Mother's Email"></td>
+  </tr>
+  <tr>
+    <td><label for="mothersoccupation">Mother's Occupation:</label></td>
+    <td><input type="text" id="mothersoccupation" formControlName="mothersoccupation" placeholder="Mother's Occupation"></td>
+  </tr>
+  <tr>
+    <td><label for="mothersEmployer">Mother's Employer:</label></td>
+    <td><input type="text" id="mothersEmployer" formControlName="mothersEmployer" placeholder="Mother's Employer"></td>
+  </tr>
+</table>
+
+<!-- ... Existing code below ... -->
+
+
+
+
+
+
+              <!-- below is submit button -->
+        <button [disabled]="!familyForm.valid" type="submit" >Submit</button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,54 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+  <!-- Family Information -->
+  <div>
+    <label for="family_last_name">Family Last Name:</label>
+    <input type="text" id="family_last_name" formControlName="family_last_name" required>
+  </div>
+
+  <div>
+    <label for="fathers_email">Father's Email:</label>
+    <input type="email" id="fathers_email" formControlName="fathers_email" required>
+  </div>
+
+  <div>
+    <label for="mothers_email">Mother's Email:</label>
+    <input type="email" id="mothers_email" formControlName="mothers_email" required>
+  </div>
+
+  <!-- Parents Information -->
+  <div formGroupName="parents_info">
+    <label for="fathers_name">Father's Name:</label>
+    <input type="text" id="fathers_name" formControlName="fathers_name" required>
+  
+    <label for="mothers_name">Mother's Name:</label>
+    <input type="text" id="mothers_name" formControlName="mothers_name" required>
+
+    <!-- Add other fields in parents_info as needed -->
+  </div>
+
+  <!-- General Information -->
+  <div formGroupName="general">
+    <!-- Add fields in the general group as needed -->
+  </div>
+
+  <!-- Checklist -->
+  <div formArrayName="checklist">
+    <!-- You may need to handle this differently based on dynamic checkbox creation -->
+  </div>
+
+  <!-- Student Details -->
+  <div formGroupName="student_details">
+    <!-- Add fields in the student_details group as needed -->
+  </div>
+
+  <!-- Health Requirements -->
+  <div formGroupName="health_requirements">
+    <!-- Add fields in the health_requirements group as needed -->
+
+    <div formArrayName="applicant_dosage">
+      <!-- You may need to handle this differently based on dynamic array creation -->
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

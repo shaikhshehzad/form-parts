@@ -1,0 +1,851 @@
+ <form [formGroup]="form" (ngSubmit)="onSubmit($event)" >
+  <div style="text-align: center; ">
+      PART I
+    </div>
+    <div>
+      <div style="margin-top: 25px; margin-left: 25%;">
+        Family Name 
+      </div>
+      <div style="display: flex; ">
+        <div  ><input style="width: 120%; margin-left: 188%;border: 1px solid black;" type="text" placeholder="Last Name" formControlName="family_last_name" /></div>
+        <div><input style="width: 120%; margin-left: 226%;" type="text" placeholder="First Name" formControlName="fathers_email"   /></div>
+        <div><input style="width: 120%; margin-left: 264%;" type="text" placeholder="Middle Name" formControlName="mothers_email" /></div>
+      </div>
+    </div>
+    <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+      <div>
+        Parent’s Email (Mother)
+      </div>
+      <div style="margin-left: 28%;">
+        Parent’s Email (Father)
+      </div>
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+      <div>
+        <input formControlName="fathers_email" style="width: 150%;" type="text"/>
+      </div>
+      <div >
+        <input formControlName="mothers_email" style="margin-left: 146%; width: 150%;" type="text"/>
+      </div>
+    </div>
+  
+    <div style=" margin-left: 25%; margin-top: 25px;">
+      <div>
+        Total Number of family members applying to Renaissance Academy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input  formControlName="totalNumberofFamily" style="width: 22%; margin-top: 10px;" type="text"/>
+      </div>
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px; display: flex;">
+      <div>
+        Has any family member or this applicant applied to Renaissance Academy before
+      </div>
+      <div>
+        <input style="margin-left: 50px;" type="radio" name="familyApplied" (change)="updateFamilyApplied(true)"/> Yes
+      </div>
+      <div>
+        <input type="radio" name="familyApplied" (change)="updateFamilyApplied(false)"/> No
+      </div>
+    </div>
+  
+    <div>
+      <table style="margin-top: 25px; margin-left: 25%; width: 53%;">
+        <tr>
+          <th>
+            Student First Name
+          </th>
+          <th>
+            Date of Birth
+          </th>
+          <th>
+            Grade Applying For
+          </th>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </table>
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%;">
+      Please ensure that all of the required forms listed below have been completed before returning.
+  this application <br> to Renaissance Academy
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      Applicant’s Checklist
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input id="check1" type="checkbox" (change)="updateSelectedCheckboxes(1)"/> Application for Admission 
+    </div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      <input id="check2" type="checkbox" (change)="updateSelectedCheckboxes(2)"/> Health Requirements Form (Pre-K & KG applicants only) 
+    </div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      <input id="check3" type="checkbox" (change)="updateSelectedCheckboxes(3)"/> Updated Immunization Record 
+    </div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      <input id="check4" type="checkbox" (change)="updateSelectedCheckboxes(4)"/> Birth Certificate 
+    </div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      <input id="check5" type="checkbox" (change)="updateSelectedCheckboxes(5)"/> Record Release Form 
+    </div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      <input id="check6" type="checkbox" (change)="updateSelectedCheckboxes(6)"/> Family Financial Agreement (1 per family) 
+    </div>
+  
+    <div style="display: flex;">
+    <div style="margin-top: 25px; margin-left: 25%;">
+      <div>
+        Operation Name
+      </div>
+      <div style="margin-top: 10px; font-weight: bold; font-size: large;">
+        Renaissance Academy
+      </div>
+    </div>
+  
+    
+    <div style="margin-top: 25px; margin-left: 25%;">
+      <div>
+        Director’s Name
+      </div>
+      <div style="margin-top: 10px; font-weight: bold; font-size: large;">
+        Delphine Phelps
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      Child’s Full Name
+    </div>
+    <div style="display: flex; ">
+      <div><input style="width: 120%; margin-left: 188%;" type="text" formControlName="" placeholder="Last Name"/></div>
+      <div><input style="width: 120%; margin-left: 226%;" type="text" formControlName="" placeholder="First Name"/></div>
+      <div><input style="width: 120%; margin-left: 264%;" type="text" formControlName="" placeholder="Middle Name"/></div>
+    </div>
+  </div>
+  
+  <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+    <div>
+      Child’s Date of Birth
+    </div>
+    <div style="margin-left: 30%;">
+      Child’s Home Telephone No
+    </div>
+  </div>
+  
+  <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+    <div>
+      <input style="width: 150%;" type="text"/>
+    </div>
+    <div >
+      <input style="margin-left: 146%; width: 150%;" type="text"/>
+    </div>
+  </div>
+  
+  <div style="margin-left: 25%; margin-top: 25px;">
+    <div>
+      Child’s Home Address
+    </div>
+    <div>
+      <input style="width: 70%; margin-top: 10px;" type="text" />
+    </div>
+  </div>
+  
+  <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+    <div>
+      Date of Admission
+    </div>
+    <div style="margin-left: 32%;">
+      Date of Withdrawal
+    </div>
+  </div>
+  
+  <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+    <div>
+      <input style="width: 150%;" type="text"/>
+    </div>
+    <div >
+      <input style="margin-left: 146%; width: 150%;" type="text"/>
+    </div>
+  </div>
+  
+  <div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      Parent’s or Guardian’s Name
+    </div>
+    <div style="display: flex; ">
+      <div><input style="width: 120%; margin-left: 188%;" type="text" formControlName="" placeholder="Last Name"/></div>
+      <div><input style="width: 120%; margin-left: 226%;" type="text" formControlName="" placeholder="First Name"/></div>
+      <div><input style="width: 120%; margin-left: 264%;" type="text" formControlName="" placeholder="Middle Name"/></div>
+    </div>
+  </div>
+  
+  <div style="margin-left: 25%; margin-top: 25px;">
+    <div>
+      Address (if different from child’s address)
+    </div>
+    <div>
+      <input formControlName="" style="width: 70%; margin-top: 10px;" type="text" />
+    </div>
+  </div>
+  
+  <div style="margin-left: 25%; margin-top: 25px;">
+    List telephone numbers below where parents/guardian may be reached while child will be in care:
+  </div>
+  
+  <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+    <div>
+      Mother’s Telephone No
+    </div>
+    <div style="margin-left: 3%;">
+      Father’s Telephone No
+    </div>
+    <div style="margin-left: 2%;">
+      Guardian’s Telephone No
+    </div>
+    <div style="margin-left: 2%;">
+      Cell Phone No
+    </div>
+  </div>
+  
+  <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+    <div>
+      <input  formControlName="" style="width: 90%;" type="text"/>
+    </div>
+    <div >
+      <input formControlName="" style="margin-left: -1%; width: 90%;" type="text"/>
+    </div>
+    <div >
+      <input formControlName="" style="margin-left: -2%; width: 90%;" type="text"/>
+    </div>
+    <div >
+      <input formControlName="" style="margin-left: -3%; width: 90%;" type="text"/>
+    </div>
+  </div>
+  
+  <div style="margin-left: 25%; margin-top: 25px;">
+    <div>
+      Give the name, address and phone number of person to call in case of an emergency if parents / guardian <br>cannot be reached
+    </div>
+    <div>
+      <input style="width: 70%; margin-top: 10px;" type="text" />
+    </div>
+  </div>
+  
+  <div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      I hereby authorize the childcare operation to allow my child to leave the childcare operation ONLY with <br>
+       the following persons. Please list name & 
+      telephone number for each. Children will only be released to a <br> parent or a person designated by the parent/guardian after verification of ID  </div>
+    <div style="display: flex; ">
+      <div><input style="width: 120%; margin-left: 188%;" type="text" formControlName="" placeholder=""/></div>
+      <div><input style="width: 120%; margin-left: 226%;" type="text" formControlName="" placeholder=""/></div>
+      <div><input style="width: 120%; margin-left: 264%;" type="text" formControlName="" placeholder=""/></div>
+    </div>
+  </div>
+  
+  <div style="margin-top: 25px; margin-left: 25%;border: 1px solid black; width: 53%; font-weight: bold;">
+      Parent Information
+  </div>
+  
+  <div>
+    <div style="margin-top: 25px; margin-left: 25%;">
+      Father's Name
+    </div>
+    <div style="display: flex; margin-top: 10px;">
+      <div><input style="width: 120%; margin-left: 188%;" type="text" formControlName="" placeholder="Last Name"/></div>
+      <div><input style="width: 120%; margin-left: 226%;" type="text" formControlName="" placeholder="First Name"/></div>
+      <div><input style="width: 120%; margin-left: 264%;" type="text" formControlName="" placeholder="Middle Name"/></div>
+    </div>
+  </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px;">
+      <div>
+        Address
+      </div>
+      <div>
+        <input formControlName="" style="width: 70%; margin-top: 10px;" type="text" />
+      </div>
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px;">
+      <div>
+        Telephone Numbers
+      </div>
+      <div style="display: flex; margin-top: 10px;">
+        <div><input style="width: 120%;" type="text" placeholder="Home" formControlName="" /></div>
+        <div><input style="width: 120%; margin-left: 38%;" type="text" formControlName="" placeholder="Business"/></div>
+        <div><input style="width: 120%; margin-left: 75%;" type="text" formControlName="" placeholder="Mobile"/></div>
+      </div>
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+      <div>
+        Email
+      </div>
+      <div style="margin-left: 21%;">
+        Occupaton
+      </div>
+      <div style="margin-left: 17%;">
+        Employer
+      </div>
+    </div>
+    
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+      <div>
+        <input style="width: 120%;" type="text"/>
+      </div>
+      <div >
+        <input style="margin-left: 38%; width: 120%;" type="text"/>
+      </div>
+      <div >
+        <input style="margin-left: 75%; width: 120%;" type="text"/>
+      </div>
+    </div>
+  
+    <div>
+      <div style="margin-top: 25px; margin-left: 25%;">
+        Mother's Name
+      </div>
+      <div style="display: flex; margin-top: 10px;">
+        <div><input style="width: 120%; margin-left: 188%;" type="text" placeholder="Last Name"/></div>
+        <div><input style="width: 120%; margin-left: 226%;" type="text" placeholder="First Name"/></div>
+        <div><input style="width: 120%; margin-left: 264%;" type="text" placeholder="Middle Name"/></div>
+      </div>
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px;">
+      <div>
+        Address
+      </div>
+      <div>
+        <input style="width: 70%; margin-top: 10px;" type="text" />
+      </div>
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px;">
+      <div>
+        Telephone Numbers
+      </div>
+      <div style="display: flex; margin-top: 10px;">
+        <div><input style="width: 120%;" type="text" placeholder="Home"/></div>
+        <div><input style="width: 120%; margin-left: 38%;" type="text" placeholder="Business"/></div>
+        <div><input style="width: 120%; margin-left: 75%;" type="text" placeholder="Mobile"/></div>
+      </div>
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+      <div>
+        Email
+      </div>
+      <div style="margin-left: 21%;">
+        Occupaton
+      </div>
+      <div style="margin-left: 17%;">
+        Employer
+      </div>
+    </div>
+    
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+      <div>
+        <input style="width: 120%;" type="text"/>
+      </div>
+      <div >
+        <input style="margin-left: 38%; width: 120%;" type="text"/>
+      </div>
+      <div >
+        <input style="margin-left: 75%; width: 120%;" type="text"/>
+      </div>
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      CHECK ALL THAT APPLY:
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%; font-weight: bold;">
+      1. TRANSPORTATION
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      I hereby &nbsp;&nbsp;<input type="radio" name="consent"/>give &nbsp;&nbsp;<input type="radio" name="consent"/>do not give − consent for my child to be transported and supervised by the <br>operation’s employees
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      Walk Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>for emergency care 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>on field trips 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>to and from home 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>to and from school 
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      2. FIELD TRIPS
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      I hereby &nbsp;&nbsp;<input type="radio" name="consent"/>give &nbsp;&nbsp;<input type="radio" name="consent"/>do not give − consent for my child to participate in Field Trips
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 10px;">
+      <div>
+        Parent’s Comments
+      </div>
+      <div>
+        <input style="width: 70%; margin-top: 10px;" type="text" />
+      </div>
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      3. WATER ACTIVITIES
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      I hereby &nbsp;&nbsp;<input type="radio" name="consent"/>give &nbsp;&nbsp;<input type="radio" name="consent"/>do not give − consent for my child to participate in Water Activities
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" name="walkHome"/>sprinkler play 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>splashing/wading pools 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>swimming pools 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>water table play 
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      4. RECEIPT OF WRITTEN OPERATIONAL POLICIES
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+     <input type="checkbox"/> I acknowledge receipt of the facility’s operational policies including those for discipline and guidance
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      5.  I UNDERSTAND THAT THE FOLLOWING MEALS WILL BE SERVED TO MY CHILD WHILE <BR>IN CARE
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="walkHome"/>None 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>Breakfast
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>AM Snack
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>Lunch 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>PM Snack 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>Supper 
+      &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="walkHome"/>Evening Snack 
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      6. MY CHILD IS NORMALLY IN CARE ON THE FOLLOWING DAYS AND TIME
+    </div>
+  
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="Weeks"/>Mondays
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      from<input type="text"/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to <input type="text"/>
+    </div>
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="Weeks"/>Tuesdays
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      from<input type="text"/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to <input type="text"/>
+    </div>
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="Weeks"/>Wednesdays
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      from<input type="text"/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to <input type="text"/>
+    </div>
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="Weeks"/>Thursdays
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      from<input type="text"/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to <input type="text"/>
+    </div>
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="Weeks"/>Fridays
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp; from<input type="text"/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to <input type="text"/>
+    </div>
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="Weeks"/>Saturdays
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      from<input type="text"/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to <input type="text"/>
+    </div>
+    <div style="margin-top: 10px; margin-left: 25%;">
+      <input type="checkbox" name="Weeks"/>Sundays
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      from<input type="text"/> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to <input type="text"/>
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold;">
+      AUTHORIZATION FOR EMERGENCY MEDICAL ATTENTION:
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 10px;">
+      In the event I cannot be reached to make <br>arrangements for emergency medical care, I authorize the person in charge to take my child 
+      to:
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+      <div>
+        Name of Physician
+      </div>
+      <div style="margin-left: 31%;">
+        Phone
+      </div>
+    </div>
+    
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+      <div>
+        <input style="width: 150%;" type="text"/>
+      </div>
+      <div >
+        <input style="margin-left: 146%; width: 150%;" type="text"/>
+      </div>
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+        Address
+    </div> 
+    <div style="margin-left: 25%;">
+        <input style="width: 70%; margin-top: 10px;" type="text"/>
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+      <div>
+        Name of Emergency Medical Care Facility
+      </div>
+      <div style="margin-left: 16%;">
+        Phone
+      </div>
+    </div>
+    
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+      <div>
+        <input style="width: 150%;" type="text"/>
+      </div>
+      <div >
+        <input style="margin-left: 146%; width: 150%;" type="text"/>
+      </div>
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+        Address
+    </div> 
+    <div style="margin-left: 25%;">
+        <input style="width: 70%; margin-top: 10px;" type="text"/>
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px;">
+      <input style="margin-top: 10px;" type="checkbox"/>I give consent for the facility to secure any and all 
+      necessary emergency medical care for my child.
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold; font-size: large;">
+      VISION
+    </div>
+  
+    <div>
+      <table style="margin-top: 10px; margin-left: 25%; width: 53%;">
+        <tr>
+          <td style="width: 50%;">
+            R 20/
+          </td>
+          <td>
+            L 20/
+          </td>
+        </tr>
+        <tr>
+          <td>Date:</td>
+          <td style="text-align: center;"><input type="radio" name="vision"/>Pass <input type="radio" name="vision"/>Fail </td>
+        </tr>
+      </table>
+    </div>
+  
+    <div style="margin-top: 25px; margin-left: 25%; font-weight: bold; font-size: large;">
+      HEARING
+    </div>
+  
+    <div>
+      <table style="margin-top: 10px; margin-left: 25%; width: 53%;">
+        <tr>
+          <th></th>
+          <th >
+            1000
+          </th>
+          <th>
+            2000
+          </th>
+          <th>
+            4000
+          </th>
+          <th rowspan="3">
+            <input type="radio" name="hearing"/>Pass <input type="radio" name="hearing"/>Fail
+          </th>
+        </tr>
+        <tr>
+          <td>R</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>L</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </table>
+    </div>
+    
+    <div style="text-align: center; font-weight: bold; margin-top: 40px;">
+      HEALTH REQUIREMENTS
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 25px;">
+      <div>
+        Name of Child
+      </div>
+      <div style="margin-left: 34%;">
+        Date of Birth
+      </div>
+    </div>
+  
+    <div style="display: flex; margin-left: 25%; margin-top: 10px;">
+      <div>
+        <input style="width: 220%;" type="text"/>
+      </div>
+      <div >
+        <input style="margin-left: 146%; width: 150%;" type="text"/>
+      </div>
+    </div>
+  
+    <div>
+      <table style="margin-top: 25px; margin-left: 25%; width: 53%;">
+        <tr>
+          <th>
+            <div style="height: 60px;">
+              <Div>Age -></Div>
+              <Div>Vaccines</Div>
+              <Div></Div>
+            </div>
+          </th>
+          <th>
+            Birth
+          </th>
+          <th>
+            1mos
+          </th>
+          <th>
+            2mos
+          </th>
+          <th>
+            4mos
+          </th>
+          <th>
+            6mos
+          </th>
+          <th>
+            12mos
+          </th>
+          <th>
+            15mos
+          </th>
+          <th>
+            18mos
+          </th>
+          <th>
+            19-23mos
+          </th>
+          <th>
+            2-3yrs
+          </th>
+          <th>
+            4-6yrs
+          </th>
+        </tr>
+        <tr>
+          <th>Hepatitis B</th>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisB"></td>
+        </tr>
+        <tr>
+          <th>Rotavirus</th>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Rotavirus"></td>
+  
+        </tr>
+        <tr>
+          <th>Diphtheria, Tetanus, 
+            Pertussis</th>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Diphtheria"></td>
+        </tr>
+        <tr>
+          <th>Haemophilusinfluenz
+            ae type b</th>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Haemophilusinfluenz"></td>
+        </tr>
+        <tr>
+          <th>Pneumococccal</th>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Pneumococccal"></td>
+        </tr>
+        <tr>
+          <th>Inactivated Poliovirus</th>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Poliovirus"></td>
+        </tr>
+        <tr>
+          <th>Influenza</th>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Influenza"></td>
+        </tr>
+        <tr>
+          <th>Measles, Mumps, 
+            Rubella</th>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+            <td style="text-align: center;"><input type="checkbox" name="Measles"></td>
+        </tr>
+        <tr>
+          <th>Varicella</th>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Varicella"></td>
+        </tr>
+        <tr>
+          <th>Hepatitis A</th>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+          <td style="text-align: center;"><input type="checkbox" name="HepatitisA"></td>
+        </tr>
+        <tr>
+          <th>Meningococcal</th>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+          <td style="text-align: center;"><input type="checkbox" name="Meningococcal"></td>
+        </tr>
+        <tr>
+          <th>TB TEST (if required)</th>
+          <td colspan="4"><input type="radio" name="TBtest"/>Positive </td>
+          <td colspan="4"><input type="radio" name="TBtest"/>Negative </td>
+          <td colspan="3">Date: </td>       
+        </tr>
+      </table>
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px;">
+      <input style="margin-top: 10px;" type="checkbox"/>I am excluding my child from the immunization requirements for reasons of conscience, including a <br> religious belief. I have attached an official notarized 
+      affidavit form developed and issued by the Department of <br> State Health Services. I understand this affidavit is valid for 2 years.
+    </div>
+  
+    <div style="margin-left: 25%; margin-top: 25px;">
+      For additional information regarding immunizations contact the Department of State Health Services <br>at www.dshs.state.tx.us/immunize/public.shtm
+    </div>
+     <button type="submit" >Next</button>
+</form> 
